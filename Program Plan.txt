@@ -1,0 +1,16 @@
+﻿Features I would like to implement:
+-----------------------------------
+
+> A clever way of reviewing e.g. Days holiday taken this year
+> Import start and finish times from Project Tracker automatically, as well as create new ones
+
+                <TextBlock>How do I say target hours worked?</TextBlock>
+                <TextBlock>How do I indicate home office</TextBlock>
+                <TextBlock>White should be regular work day, grey at weekend/bank holiday, blue for holiday, yellow for furloughed etc.</TextBlock>
+
+
+DayDescription: 29/05/2020 Mon - Working Bank Holiday
+HoursWorked: 8
+HoursCalculation: hours (07:30 - 16:00, 0.5 hour lunch) - Target: 8
+WorkCompletedDescription: Flying to Mexico
+LocationAndNotes: Mexico City - Travel / Home Office etc. - notes e.g. Extra hours unclaimed, just relieved to get to Mexico

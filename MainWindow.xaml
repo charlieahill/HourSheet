@@ -1,0 +1,44 @@
+﻿<Window x:Class="HourSheet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HourSheet"
+        mc:Ignorable="d"
+        Title="Hours" Height="450" MinHeight="300" Width="450" MinWidth="450" MaxWidth="450">
+    <StackPanel Orientation="Vertical">
+
+        <Border Background="LightGreen" Margin="5" Padding="8">
+        <StackPanel Orientation="Vertical">
+                <TextBlock FontSize="16" HorizontalAlignment="Center">29/05/2020 Mon - Working Bank Holiday</TextBlock>
+                <Border Background="Black" Margin="5" Height="2"/>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock FontSize="18">8</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Margin="8 0">hours (07:30 - 16:00, 0.5 hour lunch) - Target: 8</TextBlock>
+                </StackPanel>
+                <TextBlock>Flying to Mexico</TextBlock>
+                <TextBlock FontSize="9">Mexico City - Travel / Home Office etc. - notes e.g. Extra hours unclaimed, just relieved to get to Mexico</TextBlock>
+            </StackPanel>
+        </Border>
+
+        <ListView Name="DaysListView" HorizontalContentAlignment="Stretch" Margin="5">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="{Binding DisplayColour}" Margin="5" Padding="8">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="16" HorizontalAlignment="Center" Text="{Binding DayDescription}"/>
+                            <Border Background="Black" Margin="5" Height="2"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock FontSize="18" Text="{Binding HoursWorked}"/>
+                                <TextBlock VerticalAlignment="Center" Margin="8 0" Text="{Binding HoursCalculation}"/>
+                            </StackPanel>
+                            <TextBlock Text="{Binding WorkCompletedDescription}"/>
+                            <TextBlock FontSize="9" Text="{Binding LocationAndNotes}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackPanel>
+</Window>
